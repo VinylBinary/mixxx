@@ -543,7 +543,7 @@ void WSearchLineEdit::slotTriggerSearch() {
 /// saves the current query as selection
 void WSearchLineEdit::slotSaveSearch() {
     m_saveTimer.stop();
-    QString cText = currentText().trimmed();
+    QString cText = currentText();
     int cIndex = findCurrentTextIndex();
 #if ENABLE_TRACE_LOG
     kLogger.trace()
