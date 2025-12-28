@@ -190,8 +190,7 @@ WaveformWidgetFactory::WaveformWidgetFactory()
             m_openGLShaderAvailable = QOpenGLShaderProgram::hasOpenGLShaderPrograms(pContext);
 
             m_openGLVersion = pContext->isOpenGLES() ? "ES " : "";
-            m_openGLVersion += majorVersion == 0 ? QString("None") : versionString;
-
+            m_openGLVersion = versionString;
             // Qt5 requires at least OpenGL 2.1 or OpenGL ES 2.0
             if (pContext->isOpenGLES()) {
                 if (majorVersion * 100 + minorVersion >= 200) {
